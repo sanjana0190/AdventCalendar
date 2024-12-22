@@ -1,0 +1,62 @@
+body{
+    font-family: 'Abril Fatface', sans-serif;
+    text-align: center;
+    background-color:  #F8E8D0;
+    color: #ff9900;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2.5rem;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+}
+
+.day {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    background: #FFD9D9;
+    border: 2px solid #ffc6c6;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.day-opened {
+    background: #ffe066;
+    color:  #333;
+}
+
+.day .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0,0,0,0,8);
+    color: white;
+    border-radius: 10px;
+    font-family: 'Lato';
+}
+
+.day.opened .content {
+    display: flex;
+}
+
