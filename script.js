@@ -1,17 +1,17 @@
 import { gifts } from "./gifts.js";
-const calendar = document.querySelector(".calendar");
+const houseBody = document.getElementById("house-body");
 
-gifts.forEach((gift, index) => {
-  const day = document.createElement("div");
-  day.classList.add("day");
-  day.dataset.index = index + 1;
-  day.innerHTML = `${index + 1} <div class="content">${gift}</div>`;
+gifts.forEach((gift) => {
+  const window = document.createElement("div");
+  window.className = "window";
+  window.textContent = gift.title;
+  const description = document.createElement("div");
+  description.className = "window-description";
+  description.textContent = gift.description;
 
-  day.addEventListener("click", () => {
-    if (!day.classList.contains("opened")) {
-      day.classList.add("opened");
-    }
+  window.appendChild(description);
+  window.addEventListener("click", () => {
+    window.classList.toggle("opened");
   });
-
-  calendar.appendChild(day);
+  houseBody.appendChild(window);
 });
