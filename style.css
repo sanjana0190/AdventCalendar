@@ -136,6 +136,28 @@ h1 {
   max-width: 400px;
   width: 90%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-title {
+  font-size: 1.8rem;
+  color: #3d3d3d;
+  margin: 0;
+}
+
+.modal-gif {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.modal-description {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
 }
 
 @media (max-width: 768px) {

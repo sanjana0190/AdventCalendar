@@ -16,7 +16,11 @@ modal.appendChild(modalContent);
 document.body.appendChild(modal);
 
 const openModal = (gift) => {
-  modalContent.innerHTML = `<h2>${gift.title}</h2><p>${gift.description}</p>`;
+  modalContent.innerHTML = `
+    <h2 class="modal-title">${gift.title}</h2>
+    ${gift.gifUrl ? `<img src="${gift.gifUrl}" alt="${gift.title}" class="modal-gif">` : ""}
+    <p class="modal-description">${gift.description}</p>
+  `;
   modalContent.appendChild(modalClose);
   modal.style.display = "flex";
 };
