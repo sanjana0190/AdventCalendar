@@ -18,6 +18,7 @@ document.body.appendChild(modal);
 const openModal = (gift) => {
   modalContent.innerHTML = `
     <h2 class="modal-title">${gift.title}</h2>
+    <h3 class="gift-title">${gift.giftTitle}</h3>
     ${gift.gifUrl ? `<img src="${gift.gifUrl}" alt="${gift.title}" class="modal-gif">` : ""}
     <p class="modal-description">${gift.description}</p>
   `;

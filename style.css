@@ -147,6 +147,13 @@ h1 {
   margin: 0;
 }
 
+.gift-title {
+  font-size: 1.4rem;
+  color: #3d5b50;
+  margin: 10px 0;
+  font-family: "Lato", sans-serif;
+}
+
 .modal-gif {
   width: 100%;
   max-width: 400px;
