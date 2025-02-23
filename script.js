@@ -36,7 +36,19 @@ gifts.forEach((gift) => {
   window.textContent = gift.title;
 
   window.addEventListener("click", () => {
-    openModal(gift);
+    const lastOpenedDate = localStorage.getItem("lastOpenedDate");
+    const today = new Date().toISOString().split("T")[0]; //we are getting today's date in the YYY-MM-DD format
+
+    if (lastOpenedDate === today) {
+      alert(
+        "There there, let's not be greedy, shall we? You can only open one gift per day!"
+      );
+      return;
+    }
+
+    localStorage.setItem("lastOpenedDate", today); //we are setting the lastOpenedDate after doing the check
+
+    openModal(gift); //then opening the modal
     window.classList.toggle("opened");
   });
   houseBody.appendChild(window);
