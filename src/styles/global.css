@@ -1,0 +1,29 @@
+@import "../index.css";
+/* All font system classes are defined in index.css */
+
+body {
+  background-color: #f2e5b9;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px #e73b0d, 0 0 10px #e73b0d, 0 0 15px #e73b0d;
+  }
+  50% {
+    box-shadow: 0 0 12px #e73b0d, 0 0 25px #e73b0d, 0 0 30px #e73b0d;
+  }
+}
+
+.glow-effect {
+  animation: pulseGlow 2s infinite;
+}
+
+.hover-text {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-container:hover .hover-text {
+  opacity: 1;
+}
